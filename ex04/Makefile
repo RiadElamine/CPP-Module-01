@@ -4,7 +4,7 @@ SOURCE = main.cpp
 
 OBJECT = $(SOURCE:.cpp=.o)
 
-HEARDER = 
+HEARDER = replace.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 all : $(OBJECT)
