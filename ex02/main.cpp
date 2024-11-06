@@ -6,22 +6,30 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 08:56:59 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/03 16:21:03 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:39:24 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+
 
 int main()
 {
-	Zombie *z = zombieHorde(5, "relamine");
-	if (!z)
-		return (1);
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
-	for (int i = 0; i < 5 ; i++)
-		z[i].announce();
-	
-	delete[] z;
+	std::cout << "The memory address of str: "
+	<< &str << std::endl;
+	std::cout << "The memory address held by stringPTR: "
+	<< stringPTR << std::endl;
+	std::cout << "The memory address held by stringREF: "
+	<< &stringREF << std::endl;
 
-	return (0);
+	std::cout << "The value of str: "
+	<< str << std::endl;
+	std::cout << "The value pointed to by stringPTR: "
+	<< *stringPTR << std::endl;
+	std::cout << "The value pointed to by stringREF: "
+	<< str << std::endl;
 }

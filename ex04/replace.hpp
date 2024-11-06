@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 08:56:59 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/03 16:21:03 by relamine         ###   ########.fr       */
+/*   Created: 2024/11/06 22:03:19 by relamine          #+#    #+#             */
+/*   Updated: 2024/11/06 22:05:34 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int main()
-{
-	Zombie *z = zombieHorde(5, "relamine");
-	if (!z)
-		return (1);
+#include <iostream>
+#include <fstream>
 
-	for (int i = 0; i < 5 ; i++)
-		z[i].announce();
-	
-	delete[] z;
+void _replace(std::string line, std::string s1, std::string s2, std::ofstream &outfile);
 
-	return (0);
-}
