@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:12:56 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/09 00:14:26 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/09 00:27:42 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void Harl::error( void )
 
 int	whois( std::string level )
 {
-	std::string levels[4] = {"debug", "info", "warning", "error"};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4; i++)
 	{
 		switch (levels[i].compare(level))
