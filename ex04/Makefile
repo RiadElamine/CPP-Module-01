@@ -1,6 +1,6 @@
 NAME = tests
 
-SOURCE = main.cpp
+SOURCE = main.cpp replace.cpp
 
 OBJECT = $(SOURCE:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 22:03:30 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/06 22:06:37 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/18 05:16:29 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,17 @@
 
 void _replace(std::string line, std::string s1, std::string s2, std::ofstream &outfile)
 {
-	size_t len = line.length();
-	size_t len_s1 = s1.length();
-	size_t i = 0;
-	size_t b;
 
-	while (len > 0)
+    size_t pos = 0;
+    size_t start = 0;
+
+	pos = line.find(s1, start);
+    while (pos != std::string::npos)
 	{
-		b = 0;
-		while (len != b && len_s1 != b && line[b + i] == s1[b])
-			b++;
-		if (len_s1 && b == len_s1)
-		{
-			outfile << s2;
-			i += len_s1;
-			len-=len_s1;
-		}
-		else
-		{
-			outfile << line[i];	
-			i++;
-			len--;
-		} 
-	}
+        outfile << line.substr(start, pos - start);
+        outfile << s2;
+        start = pos + s1.length();
+		pos = line.find(s1, start);
+    }
+	outfile << line.substr(start);
 }
