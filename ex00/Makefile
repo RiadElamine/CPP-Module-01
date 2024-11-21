@@ -10,12 +10,14 @@ OBJECT = $(SOURCE:.cpp=.o)
 HEARDER = Zombie.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-all : $(OBJECT)
+
+all : $(NAME)
+
+$(NAME): $(OBJECT)
 	c++ $(CFLAGS) $(OBJECT) -o $(NAME)
 
 %.o: %.cpp $(HEARDER)
 	c++ $(CFLAGS) -c $< -o $@
-
 
 clean:
 	rm -f $(OBJECT)
