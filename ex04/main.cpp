@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:59:30 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/18 04:09:38 by relamine         ###   ########.fr       */
+/*   Updated: 2024/12/15 00:19:48 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,18 @@ int main(int argc, char **argv)
 	s1 = argv[2];
 	s2 = argv[3];
 	
-	std::ofstream outfile(filename + ".replace");
-	if (!outfile.is_open())
-	{
-		std::cerr << "Error opening file!" << std::endl;
-		return (1);
-	}
 	std::ifstream intfile(filename);
 	if (!intfile.is_open())
 	{
 		std::cerr << "Error opening file!" << std::endl;
-		outfile.close();
+		return (1);
+	}
+	
+	std::ofstream outfile(filename + ".replace");
+	if (!outfile.is_open())
+	{
+		std::cerr << "Error opening file!" << std::endl;
+		intfile.close();
 		return (1);
 	}
 
