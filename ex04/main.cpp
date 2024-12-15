@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:59:30 by relamine          #+#    #+#             */
-/*   Updated: 2024/12/15 00:19:48 by relamine         ###   ########.fr       */
+/*   Updated: 2024/12/15 02:56:15 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int main(int argc, char **argv)
 
 	while (std::getline(intfile , line))
 	{
-		_replace(line, s1, s2 , outfile);
 		if (!intfile.eof())
-			outfile << std::endl;
+			line += '\n';
+		_replace(line, s1, s2 , outfile);
 	}
 
 	outfile.close();
