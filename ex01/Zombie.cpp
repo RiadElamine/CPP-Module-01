@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 09:56:04 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/03 14:42:42 by relamine         ###   ########.fr       */
+/*   Updated: 2024/12/16 13:51:17 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,9 @@ void  Zombie::announce( void )
 Zombie::~Zombie()
 {
 	std::cout << name << ": destroyed " << std::endl;	
+}
+
+void Zombie::setZombie(std::string name)
+{
+	this->name = name;
 }

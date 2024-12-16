@@ -6,12 +6,12 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:38:31 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/03 15:33:49 by relamine         ###   ########.fr       */
+/*   Updated: 2024/12/16 13:53:53 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <cstdlib>
+
 Zombie* zombieHorde( int N, std::string name)
 {
 	Zombie *a;
