@@ -16,6 +16,11 @@ Zombie* zombieHorde( int N, std::string name)
 {
 	Zombie *a;
 
+	if (N <= 0)
+	{
+		std::cout << "Memory allocation failed\n";
+		return (NULL);
+	}
 	a = new Zombie[N];
 	if (!a || N <= 0)
 	{
