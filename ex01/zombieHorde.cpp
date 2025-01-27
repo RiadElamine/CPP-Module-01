@@ -22,7 +22,7 @@ Zombie* zombieHorde( int N, std::string name)
 		return (NULL);
 	}
 	a = new Zombie[N];
-	if (!a || N <= 0)
+	if (!a)
 	{
 		std::cout << "Memory allocation failed\n";
 		return (NULL);
